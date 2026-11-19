@@ -37,8 +37,11 @@ El proyecto se desarrolla progresivamente mediante diferentes etapas, cada una e
 Las etapas se documentan individualmente, incluyendo su arquitectura, herramientas utilizadas, procedimiento de implementación y pruebas de validación.
 
 
-### tabla para definir cada stage ...
+> 🚧 Esta sección se irá actualizando a medida que se incorporen nuevos stages.
 
+| #  | Stage                 | Documentation                    | Estado           |
+| -- | ------------------------ | ---------------------------------------- | ---------------- |
+| 01 | Despliegue Local | [Stage 1 — Despliegue local](./stage-1-local/Stage_1_Documentation.md)| 🟢 Desarrollado |
 
 ## 5. Estructura de la Documentación
 
@@ -54,32 +57,3 @@ Esta organización permite mantener una documentación independiente para cada e
 **Brayan Neciosup Bolaños**
 
 Data & Cloud Engineer
-
-### Stage 1 — Despliegue local
-
-Ejecución de la API directamente en un entorno local, utilizando UV para la gestión de dependencias y PostgreSQL como sistema de persistencia.
-
-**Documentación:** [Stage 1 — Despliegue local](Stage_1_Documentation.md)
-
-### Próximas etapas
-
-Las siguientes etapas se incorporarán progresivamente conforme se desarrollen y validen sus respectivas implementaciones.
-
-## 5. Tecnologías y Herramientas
-
-El proyecto utiliza diferentes tecnologías y herramientas dependiendo del escenario de despliegue abordado.
-
-Entre las principales tecnologías de la aplicación base se encuentran:
-
-| Tecnología | Propósito |
-|---|---|
-| Python | Lenguaje de programación |
-| Flask | Desarrollo de la API REST |
-| PostgreSQL | Gestión de la base de datos |
-| SQLAlchemy | ORM e interacción con la base de datos |
-| Flask-Migrate / Alembic | Gestión de migraciones |
-| PyTest | Pruebas automatizadas |
-| UV | Gestión de dependencias y entorno Python |
-| Random Forest | Modelo de Machine Learning |
-
-Las herramientas adicionales de infraestructura, contenerización y servicios cloud se detallan en la documentación de cada etapa.
