@@ -130,7 +130,6 @@ class EvaluationsService:
         }
 
         # 3. Predecir (el modelo recibe 0/1 y diabetes como 0/2, igual que en el entrenamiento)
-        # result = predict_evaluation_model_ml(data=features) ## Función de predicción (S3)
         result = predict_evaluation_model_ml(path_model=settings.PATH_MODEL_ML_PKL ,data=features) ## Función de predicción (LOCAL)
         # 4. Registrar en la BD.
         record = {**data, "result_evaluation": result}

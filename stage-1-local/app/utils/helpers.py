@@ -4,45 +4,6 @@ import pandas as pd
 import pickle
 import uuid
 
-import boto3
-from io import BytesIO
-import os
-
-## Función de predicción (S3)
-# def predict_evaluation_model_ml(
-#     data: dict
-# ) -> int:
-
-#     ## Valores que el usuario envía mediante request
-#     values = list(data.values())
-#     columns = list(data.keys())
-
-#     ## Convertimos a un DataFrame
-#     df = pd.DataFrame(data=[values], columns=columns)
-
-#     ## Cliente de AWS S3
-#     s3_client = boto3.client(
-#         "s3",
-#         region_name="us-east-2"
-#     )
-
-#     ## Recuperamos el modelo desde S3
-#     response = s3_client.get_object(
-#         Bucket=os.environ.get("BUCKET_NAME"),
-#         Key=os.environ.get("OBJECT_NAME_BUCKET")
-#     )
-
-#     ## Leemos el modelo en formato binary desde memoria
-#     model_data = pickle.load(
-#         BytesIO(response["Body"].read())
-#     )
-
-#     ## Utilizamos la función predict()
-#     result = int(model_data.predict(df)[0])
-
-#     ## Retornamos el resultado
-#     return result
-
 ## Función de predicción (LOCAL)
 def predict_evaluation_model_ml(path_model, data: dict)->int:
 
