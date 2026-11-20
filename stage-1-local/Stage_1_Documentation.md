@@ -172,7 +172,21 @@ Al finalizar esta etapa, se debe disponer de una API REST ejecutándose correcta
 
 Esta implementación constituye el punto de partida para explorar otras estrategias de despliegue en las siguientes etapas del proyecto.
 
-## 7. Autor
+## 7. Limitaciones del Despliegue Local
+
+Aunque el despliegue local permite ejecutar y validar la API directamente desde una máquina de desarrollo, presenta algunas limitaciones que deben considerarse:
+
+- **Acceso restringido al entorno local:** La API se ejecuta dentro de la máquina del desarrollador y, por defecto, solo está disponible para conexiones locales. Por lo tanto, no se encuentra expuesta públicamente a través de Internet ni permite el acceso directo de usuarios externos.
+
+- **Arquitectura monolítica:** A pesar de implementar una arquitectura en capas para separar las responsabilidades del código, la aplicación mantiene un enfoque monolítico. Tanto la API como sus componentes de acceso a datos dependen de un mismo proyecto y entorno de ejecución. Asimismo, PostgreSQL debe configurarse y ejecutarse como un servicio independiente en la máquina local.
+
+- **Configuración individual por desarrollador:** Cada integrante del equipo debe preparar su propio entorno de ejecución, instalar las dependencias, configurar las variables de entorno, disponer del modelo de Machine Learning, instalar y configurar PostgreSQL y aplicar las migraciones correspondientes.
+
+- **Posibles inconsistencias entre entornos:** Al depender de configuraciones y recursos instalados individualmente, pueden presentarse problemas relacionados con versiones de dependencias, configuraciones locales o diferencias entre los entornos de desarrollo. Esto puede ocasionar errores durante la ejecución y dificultar la reproducción del mismo escenario de trabajo entre diferentes desarrolladores.
+
+Estas limitaciones permiten identificar la necesidad de explorar nuevas alternativas de despliegue que faciliten la reproducibilidad del entorno, simplifiquen la configuración de la aplicación y permitan ofrecer acceso a la API desde otros entornos.
+
+## 8. Autor
 
 **Brayan Neciosup Bolaños**
 
